@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-add__button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+    </div>
+
+    </div>
+    <div class="popup">
+      <div id="popup-content" class="popup__content popup__content_is-opened">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form id="form" novalidate class="popup__form" name="new">
+            <input id="textinfo" minlength="2" maxlength="20"  required type="text"  name="name" class="popup__input popup__input_type_name" placeholder="Название">
+            <p id="error-text-info" class="error-text" >Должно быть от 2 до 30 символов</p>
+            <input id="linkinfo"  type="url" name="link" required class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <p  id="error-text-link" class="error-text" >Здесь должна быть ссылка
+            </p>
+            <button type class="button popup__button popup__button_content">+</button>
+        </form>
+      </div>
+      <div id="popup-user" class="popup__content popup__content_is-opened">
+        <img src="./images/close.svg" alt="" class="popup__close popup__close_user">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form popup-user" action = 'https://google.com/search' method="POST" name="newuser" novalidate>
+            <input id="textuser" required minlength="2" maxlength="20"  name="user"  class="popup__input popup__input_type_name" placeholder="Имя">
+            <p  id="error-text-user" class="error-text error-text_enabled" >Должно быть от 2 до 30 символов</p>
+            <input id="textjob" minlength="2" required maxlength="20" type="text" name="aboutuser" class="popup__input popup__input_type_job" placeholder="О себе">
+            <p id="error-text-job" class="error-text error-text_enabled" >Должно быть от 2 до 30 символов</p>
+            <button type class="button popup__button popup__button_user button_active">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-image popup-image__image">
+
+      </div>
+  </div>
+
+ <script src="./api.js"></script>
+   <script src="./scripts/formValidator.js"></script>
+   <script src="./scripts/UserInfo.js"></script>
+   <script src="./scripts/popup.js"></script>
+   <script src="./scripts/Card.js"></script>
+  <script src="./scripts/CardList.js"></script>
+   <script src="./scripts/script.js"></script> 
+    
+
+</body>
+</html>
