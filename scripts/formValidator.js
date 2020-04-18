@@ -1,4 +1,4 @@
-class FormValidaty {
+export class FormValidaty {
   constructor(form) {
     this.form = form;
   }
@@ -26,22 +26,6 @@ class FormValidaty {
   }
 
 
-  /*REVIEW3. Надо исправить. Давайте сделаем логичнее и код этой функции сократится в 2 раза. Вы передаёте параметр form в класс
-  FormValidaty, надо его использовать и в этой функции, а иенно вместо поиска с помощью querySelector в элементе document, нужно искать в
-  элементе form и тогда 2 инструкции поиска в document, можно будет заменить одной инструкцией поиска в form, то есть Ваша функция setSubmitButtonState,
-  может выглядеть так:
-  setSubmitButtonState(condition) {
-    if (condition) {
-      form.querySelector('.popup__button').classList.add('button_active');
-    } else {
-      form.querySelector('.popup__button').classList.remove('button_active');
-    }
-  }
-  Ведь кнопки сабмита на обеих формах имеют класс 'popup__button', а в 9-м спринте в проекте может появиться ещё одна форма - для смены аватара, и
-  на ней также должна быть кнопка с классом 'popup__button', и, когда Вы преобразуете setSubmitButtonState как показано выше, третья форма также
-  сможет валидироваться с помощью этого метода без изменения кода класса FormValidaty. После внесения изменений проверьте работу всех
-  функций проекта.
-    */
   setSubmitButtonState(condition) {
     if (condition) {
       this.form.querySelector('.popup__button').classList.add('button_active');

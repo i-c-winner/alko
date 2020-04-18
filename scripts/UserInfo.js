@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
     constructor(newName, newJob, name, job, avatar) {
         this.name = name;
         this.job = job;

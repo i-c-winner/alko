@@ -1,0 +1,30 @@
+{
+  "name": "alko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "dependencies": {
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-c-winner/alko.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-c-winner/alko/issues"
+  },
+  "homepage": "https://github.com/i-c-winner/alko#readme"
+}

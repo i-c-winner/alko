@@ -1,4 +1,4 @@
-(function () {
+export default (function () {
   // объявление переменных
 
   const userInfoName = document.querySelector('.user-info__name');

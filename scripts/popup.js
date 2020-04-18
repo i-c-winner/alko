@@ -1,4 +1,4 @@
-class Popup {
+ export class Popup {
   constructor(typePopup, popup, forma, name, job) {
     this.typePopup = typePopup;
     this.popup = popup;
