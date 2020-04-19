@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor(options) {
     this.path = options.baseUrl;
     this.user = options.headers;
@@ -35,7 +35,6 @@ class Api {
       })
   }
 
-  // Можно лучше
   // userUpdate
   userApdate(userName, userJob) {
 

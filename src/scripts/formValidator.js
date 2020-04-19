@@ -1,4 +1,4 @@
-export class FormValidaty {
+export default class FormValidaty {
   constructor(form) {
     this.form = form;
   }
@@ -33,13 +33,6 @@ export class FormValidaty {
       this.form.querySelector('.popup__button').classList.remove('button_active');
     }
 
-
-    //   document.querySelector('.popup__button_user').classList.add('button_active');
-    //   document.querySelector('.popup__button').classList.add('button_active');
-    // } else {
-    //   document.querySelector('.popup__button_user').classList.remove('button_active');
-    //   document.querySelector('.popup__button').classList.remove('button_active');
-    // }
   }
   setEventListeners(ifFirst, ifSecond, name) {
     this.ifFirst = ifFirst;

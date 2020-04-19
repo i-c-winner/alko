@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
 </head>
 <body>
-  <div class="root">
+   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+        <img src="<%=require ('./images/logo.svg'). default %>"  alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -29,7 +29,7 @@
     </div>
     <div class="popup">
       <div id="popup-content" class="popup__content popup__content_is-opened">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require ('./images/close.svg'). default %>"alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form id="form" novalidate class="popup__form" name="new">
             <input id="textinfo" minlength="2" maxlength="20"  required type="text"  name="name" class="popup__input popup__input_type_name" placeholder="Название">
@@ -41,7 +41,7 @@
         </form>
       </div>
       <div id="popup-user" class="popup__content popup__content_is-opened">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_user">
+        <img src="<%=require ('./images/close.svg'). default %>" alt="" class="popup__close popup__close_user">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form popup-user" action = 'https://google.com/search' method="POST" name="newuser" novalidate>
             <input id="textuser" required minlength="2" maxlength="20"  name="user"  class="popup__input popup__input_type_name" placeholder="Имя">
