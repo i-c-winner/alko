@@ -23,11 +23,11 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-      test: /\.js$/, // регулярное выражение, которое ищет все js файлы
-      use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
-      exclude: /node_modules/ // исключает папку node_modules
-          },
+      // {
+      // test: /\.js$/, // регулярное выражение, которое ищет все js файлы
+      // use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
+      // exclude: /node_modules/ // исключает папку node_modules
+      //     },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: ['file-loader?name=.vendor/[name].[ext]',

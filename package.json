@@ -1,5 +1,6 @@
 {
   "name": "alko",
+  "homepage": "https://i-c-winner.github.io/alko/",
   "version": "1.0.0",
   "description": "",
   "main": "api.js",
@@ -17,6 +18,7 @@
     "css-loader": "^3.5.2",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
@@ -42,6 +44,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/i-c-winner/alko/issues"
-  },
-  "homepage": "https://github.com/i-c-winner/alko#readme"
+  }
 }
