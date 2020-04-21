@@ -8,21 +8,15 @@
   export const link = document.forms.new.elements.link;
   export const username = document.forms.newuser.elements.user;
   export const userjob = document.forms.newuser.elements.aboutuser;
-  console.log(34);
-  
+
   import FormValidaty from './formValidator.js';
- console.log(FormValidaty);
+
  export  const newListener = new FormValidaty();
- console.log(36);
+
   export const initialCards = [];
  import Api from '../api.js';
  import Popup from './popup.js';
  import UserInfo from './UserInfo.js'
- console.log(TEST)
- let a=TEST.slice (0,-1);
- let b=TEST;
- console.log(b);
- let c=(b+'/cohort9');
   export const api = new Api({
     baseUrl: TEST+'/cohort9',
     headers: {
@@ -36,7 +30,7 @@
 
   import CardList from './CardList.js';
   import Card from './Card.js';
-  console.log(Card);
+
   const card= new Card();
   export const newCards = new CardList(document.querySelector('.places-list'), card.create, 'xrt');
   export const popupAddCard = new Popup(document.querySelector('#popup-content'), document.querySelector('.popup'), document.forms.new);
