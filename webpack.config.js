@@ -5,6 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // Подключил�
 const webpack = require('webpack');
 const WebpackMd5Hash = require('webpack-md5-hash');
 
+const config = require('./config.js');
+
+//const isDev = process.env.NODE_ENV === 'development';
+
 
 
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -23,11 +27,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      // test: /\.js$/, // регулярное выражение, которое ищет все js файлы
-      // use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
-      // exclude: /node_modules/ // исключает папку node_modules
-      //     },
+      
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: ['file-loader?name=.vendor/[name].[ext]',
@@ -43,8 +43,7 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              //   bypassOnDebug: true, // webpack@1.x
-              //   disable: true, // webpack@2.x and newer
+              
             },
           },
         ],
@@ -53,48 +52,18 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
-      // {
-      //     test: /\.(gif|png|jpe?g|svg)$/i,
-      //     use: [
-      //       'file-loader',
-      //       {
-      //         loader: 'image-webpack-loader',
-      //         options: {
-      //           bypassOnDebug: true, // webpack@1.x
-      //           disable: true, // webpack@2.x and newer
-      //         },
-      //       },
-      //     ],
-      //   },
-
-      // {
-      //     test: /\.ttf$/,
-      //     use: [
-      //       {
-      //         loader: 'ttf-loader',
-      //         options: {
-      //           name: './font/[hash].[ext]',
-      //         },
-      //       },
-      //     ]
-      // },
-
-      //     {
-      //         test: /\.css$/i,
-      //         use: [
-      //                         (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-      //                         'css-loader', 
-      //                         'postcss-loader'
-      //                 ]
-      // },
+    
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new MiniCssExtractPlugin({
+    // new webpack.DefinePlugin({
+    //   'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    // }),
+     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css'
+    }),
+     new webpack.DefinePlugin({
+      TEST: JSON.stringify(isDev ? config.test2 : config.test1),
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

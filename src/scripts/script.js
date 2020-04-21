@@ -18,8 +18,13 @@
  import Api from '../api.js';
  import Popup from './popup.js';
  import UserInfo from './UserInfo.js'
+ console.log(TEST)
+ let a=TEST.slice (0,-1);
+ let b=TEST;
+ console.log(b);
+ let c=(b+'/cohort9');
   export const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort9',
+    baseUrl: TEST+'/cohort9',
     headers: {
       authorization: '174103b5-a3c6-4ad5-a7cf-a79f567a83c5',
       'Content-Type': 'application/json'
